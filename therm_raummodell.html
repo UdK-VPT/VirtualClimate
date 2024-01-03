@@ -51,7 +51,12 @@
 
             <div class="jumbotron">
                 <h1>Thermisches Raummodell</h1>
-                <p>...</p>
+                <p>Das thermische Raummodell der interaktiven VR-Simulationsumgebung ist in Modelica
+                   auf Basis der Modellbibliothek <a href="http://www.modelica-buildingsystems.de">BuildingSystems</a>
+                   implementiert und umfasst das Umgebungsmodell
+                   mit den klimatischen Randbedingungen, das Modell zur
+                   Energiebilanzierung des Raumes sowie die UDP-Schnittstellenmodelle zu
+                   Unity und openHAB. </p>
 
                   <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="thumbnail">
@@ -63,7 +68,14 @@
                       </div>
                   </div>
 
-                  <p>...</p>
+                  <p>Das Modelica-Modell läuft parallel in Echtzeit zum
+                  Betrieb der Klimakammer und liefert die Daten zur Reproduktion des
+                  simulierten Raumklimas (Luft- und Strahlungstemperatur, Luftfeuchtigkeit,
+                  Luftgeschwindigkeit durch Raumöffnungen, Sonneneinstrahlung durch transparente
+                  Fassaden, ...) im Inneren des Klima-Iglus. Bestimmte Parameter im
+                  Modelica-Modell können sich durch die Interaktion des Nutzers dynamisch ändern,
+                  wie z.B. die Position des Benutzers im Raum, der Öffnungszustand der Fenster oder die
+                  Solltemperaturen für Raumheizung und -kühlung.</p>
             </div>
 
             <footer>
