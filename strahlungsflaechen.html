@@ -51,34 +51,64 @@
 
             <div class="jumbotron">
                 <h1>Strahlungsflächen</h1>
-                <p>...</p>
+                <p>Zur Wahrnehmung der Wärmestrahlung in die VR Simulationsumgebung wurde ein
+                   ein Zylinder mit diskretisierten Strahlungsflächen im Inneren
+                   der Klimakuppel hinzugefügt, wobei sich der Nutzer in der Mittelachse des Zylinders befindet.</p>
 
                   <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="thumbnail">
                           <img src="./img/Climate_chamber_radiation_surfaces.jpg" alt="">
                           <figcaption style="text-align:right; font-style:italic">
-                              Interaktive Virtual Reality-Simulationsumgebung mit thermischen Feedback für den Nutzer (Bildquelle: UdK Berlin)
+                              Erweiterung der Klimakammer um einen innenliegenden Zylinder mit einzeln ansteuerbaren Strahlungsflächen (Bildquelle: UdK Berlin)
                           </figcaption>
                       </div>
                   </div>
 
-                  <p>...</p>
+                  <p>Die zylindrische Mantelfläche ist vertikal und horizontal
+                     in 30 cm x 30 cm große rechteckige Strahlungsflächen diskretisiert.
+                     Für jede dieser Strahlungsflächen des Zylinders werden die Sichtfaktoren
+                     auf alle umschließenden Innenoberflächen des Raumesmodells in Abhängigkeit von der
+                     Nutzerposition zeitabhängig berechnet. Diese Sichtfaktoren bilden die Grundlage
+                     für die Berechnung einer gewichteten Ersatztemperatur, die eine Projektion
+                     aller Oberflächentemperaturen des Raummodells auf eine einzelne
+                     virtuelle Strahlungsfläche darstellen.</p>
+
             </div>
 
             <div class="jumbotron">
-                <h1>Strahlungsflächen</h1>
-                <p>...</p>
+                <h2>Thermo-Pixel</h2>
+                <p>Die einzelnen quadratischen Strahlungsflächen werden digital angesteuert und strahlen thermisch in einem weitem
+                   Temperaturbereich von 10 bis 60 °C einer vorgegebenen Soll-Temperatur.
+                   Hierfür wurden sogenannte Thermo-Pixel entwickelt, welche jeweils mit vier thermoelektrischen Elementen (TECs)
+                   mit Heiz- und Kühlfunktion versehen sind. Auf der Vorderseite erfolgt die Wärmeabgabe über thermische Strahlung
+                   und auf der Rückseite wird die Abwärme der TECs über ein Wasserkühlsystem abgeführt.
 
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="thumbnail">
+                          <img src="./img/Thermo_Pixel.jpg" alt="">
+                          <figcaption style="text-align:right; font-style:italic">
+                              Thermo-Pixel: links strahlende Vorderseite, rechts Rückseite mit Wasserkühlsystem ind digitalem Regler (Bildquelle: UdK Berlin)
+                          </figcaption>
+                      </div>
+                  </div>
+                  <p>Die TECs auf der Rückseite der Thermo-Pixel werden mit einer konstanten
+                     DC-Stromversorgung versorgt, deren Polarität je nach Heiz- oder Kühlbetrieb wechselt.
+                     Zu diesem Zweck wurde ein digitaler THErmal PIxel
+                     COntroller (ThePiCo) entwickelt. Jeder ThePiCo verfügt über zwei unabhängige H-Brücken
+                     mit Tiefpassfiltern zur Glättung des PWM-Signals. Der Controller regelt die elektrische Leistung
+                     und wechselt falls notwendig die Polarität, so dass die Thermo-Pixel durch Kühlen oder
+                     Beheizen der Oberfläche stets die gewünschte Solltenperatur erreichen.</p>
                   <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="thumbnail">
                           <img src="./img/Radiation_Columns.gif" alt="">
                           <figcaption style="text-align:right; font-style:italic">
-                              Interaktive Virtual Reality-Simulationsumgebung mit thermischen Feedback für den Nutzer (Bildquelle: UdK Berlin)
+                              Strahlungsfeld, bestehend aus 5 x 3 Thermo-Pixeln im dynamischen Betrieb (Bildquelle: UdK Berlin)
                           </figcaption>
                       </div>
                   </div>
 
-                  <p>...</p>
+                  <p>Die Infrarotausnahme zeigt eine Anordnung von 5 x 3 Thermo-Pixeln, weche abwechselnd horizontal und vertikal auf eine
+                     bestimmte Temperatur erwärmt und danach wieder abgekühlt werden.</p>
             </div>
 
             <footer>
