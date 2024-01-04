@@ -31,14 +31,14 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="./index.html">Virtual Reality Simulation Environment</a>
-                        <a class="navbar-brand" href="../konzept.html"><font color="red">DE</font></a>
+                        <a class="navbar-brand" href="./therm_room_model.html">Virtual Reality Simulation Environment</a>
+                        <a class="navbar-brand" href="../therm_raummodell.html"><font color="red">DE</font></a>
                     </div>
                     <div class="collapse navbar-collapse" id="navbar-content">
                         <ul class="nav navbar-nav">
                           <li><a href="./index.html">Home</a></li>
-                          <li class="active"><a href="./concept.html">Concept</a></li>
-                          <li><a href="./therm_room_model.html">Thermal room model</a></li>
+                          <li><a href="./concept.html">Concept</a></li>
+                          <li class="active"><a href="./therm_room_model.html">Thermal room model</a></li>
                           <li><a href="./vr_room_model.html">Virtual room model</a></li>
                           <li><a href="./climate_chamber.html">Climate chamber</a></li>
                           <li><a href="./radiation_surfaces.html">Radiation surfaces</a></li>
@@ -50,55 +50,34 @@
             </nav>
 
             <div class="jumbotron">
-                <h1>Concept</h1>
-                <p>In the interactive VR simulation environment, the progression of the
-                  indoor climate over the time is calculated in real time using a Modelica
-                  room model. The user can interactively influence the room model,
-                  e.g. by opening a window to ventilate the room. The simulated indoor
-                  climate is reproduced in the climate chamber with a set of
-                  devices (heaters, air conditioners, fans, humidifiers, etc.),
-                  which are controlled by the event-based openHAB software.
-                  In the first development stage of the VR climate chamber,
-                  the parameters air temperature, air humidity and air flow
-                  through room openings were made physically tangible for the user.</p>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="../img/concept1.jpg" alt="">
-                        <figcaption style="text-align:right; font-style:italic">
-                            Overall system of the VR simulation environment, consisting
-                            of a climate chamber, a thermal building model (Modelica) and
-                            a virtual interactive room model (Unity) (Source: UdK Berlin)
-                        </figcaption>
-                    </div>
-                </div>
-                <p>
-                In the second development stage,
-                the VR simulation environment was extended for the user to include
-                the perception of directed heat radiation through a large number of
-                individually controllable radiant surfaces.
-                Heat radiation influence the indoor climate in many different ways:
-                these include smaller, higher temperature radiant surfaces such as wall radiators
-                or larger radiation surfaces that are only slightly warmer or colder
-                such as underfloor, wall heating systems or cooling ceilings,
-                as well as the opaque and transparent interior surfaces of exterior
-                components with low thermal insulation, which therefore follow
-                the outside climate and deviate noticeably from the room air temperature.</p>
-            </div>
-
-            <div class="jumbotron">
-                <p>
-                The following video explains the concept of the interactive Virtual Reality simulation environment in detail:
-                </p>
+                <h1>Thermal Room Model</h1>
+                <p>The thermal room model of the interactive VR simulation environment
+                   is implemented in Modelica based on the
+                   <a href="http://www.modelica-buildingsystems.de">BuildingSystems</a> model library
+                   and includes the environment model with the climatic boundary conditions,
+                   the model for energy balancing of the room and the UDP interface models
+                   to Unity und openHAB. </p>
 
                   <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="thumbnail">
-                          <a href="https://www.youtube.com/watch?v=gyU_0Ixzx9A"><img src="../img/VR_Simulation_environment_method.jpg" alt="">
+                          <img src="../img/Modelica_simulation_model.jpg" alt="">
                           <figcaption style="text-align:right; font-style:italic">
-                              Description of the concept of the Virtual Reality simulation environment (Video: UdK Berlin)
+                              Thermal Modelica room model with interfaces to the interactive VR model
+                              in Unity and to the climate chamber controlled via openHAB
+                              to reproduce the simulated room climate (Source: UdK Berlin)
                           </figcaption>
                       </div>
                   </div>
-                  <p>.</p>
+
+                  <p>The Modelica model runs in parallel in real time to the operation of the
+                     climate chamber and provides the data for reproducing the simulated indoor
+                     climate (air and radiation temperature, humidity, air velocity through room
+                     openings, solar radiation through transparent facades, ...)
+                     inside the climate igloo. facades, ...) inside the climate igloo.
+                     Certain parameters in the Modelica model can change dynamically
+                     as a result of user interaction, e.g. the position of the user
+                     in the room, the opening status of the windows or the set
+                     temperatures for heating and cooling. </p>
             </div>
 
             <footer>
