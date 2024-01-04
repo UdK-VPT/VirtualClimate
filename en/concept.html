@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name="description" content="Homepage Virtual Reality Simulation Environment">
+      <meta name="author" content="Christoph Nytsch-Geusen">
+      <link rel="icon" href="../../favicon.ico">
+      <title>Virtual Reality Simulation Environment</title>
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+      <!-- Custom styles for this template -->
+      <link href="../css/styles.css" rel="stylesheet">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body>
+        <!-- Body content goes here -->
+
+         <div class="container">
+            <!-- Static navbar -->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-content">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="./index.html">Virtual Reality Simulation Environment</a>
+                        <a class="navbar-brand" href="../konzept.html"><font color="red">DE</font></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-content">
+                        <ul class="nav navbar-nav">
+                          <li><a href="./index.html">Home</a></li>
+                          <li class="active"><a href="./concept.html">Concept</a></li>
+                          <li><a href="./therm_room_modell.html">Thermal room model</a></li>
+                          <li><a href="./vr_room_model.html">Virtual room model</a></li>
+                          <li><a href="./climate_chamber.html">Climate chamber</a></li>
+                          <li><a href="./radiation_surfaces.html">Radiation surfaces</a></li>
+                          <li><a href="./examples.html">Examples</a></li>
+                          <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="jumbotron">
+                <h1>Concept</h1>
+                <p>In the interactive VR simulation environment, the progression of the
+                  indoor climate over the time is calculated in real time using a Modelica
+                  room model. The user can interactively influence the room model,
+                  e.g. by opening a window to ventilate the room. The simulated indoor
+                  climate is reproduced in the climate chamber with a set of
+                  devices (heaters, air conditioners, fans, humidifiers, etc.),
+                  which are controlled by the event-based openHAB software.
+                  In the first development stage of the VR climate chamber,
+                  the parameters air temperature, air humidity and air flow
+                  through room openings were made physically tangible for the user.</p>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="thumbnail">
+                        <img src="../img/concept1.jpg" alt="">
+                        <figcaption style="text-align:right; font-style:italic">
+                            Overall system of the VR simulation environment, consisting
+                            of a climate chamber, a thermal building model (Modelica) and
+                            a virtual interactive room model (Unity) (Source: UdK Berlin)
+                        </figcaption>
+                    </div>
+                </div>
+                <p>
+                In the second development stage,
+                the VR simulation environment was extended for the user to include
+                the perception of directed heat radiation through a large number of
+                individually controllable radiant surfaces.
+                Heat radiation influence the indoor climate in many different ways:
+                these include smaller, higher temperature radiant surfaces such as wall radiators
+                or larger radiation surfaces that are only slightly warmer or colder
+                such as underfloor, wall heating systems or cooling ceilings,
+                as well as the opaque and transparent interior surfaces of exterior
+                components with low thermal insulation, which therefore follow
+                the outside climate and deviate noticeably from the room air temperature.</p>
+            </div>
+
+            <div class="jumbotron">
+                <p>
+                The following video explains the concept of the interactive Virtual Reality simulation environment in detail:
+                </p>
+
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="thumbnail">
+                          <a href="https://www.youtube.com/watch?v=gyU_0Ixzx9A"><img src="../img/VR_Simulation_environment_method.jpg" alt="">
+                          <figcaption style="text-align:right; font-style:italic">
+                              Description of the concept of the Virtual Reality simulation environment (Video: UdK Berlin)
+                          </figcaption>
+                      </div>
+                  </div>
+                  <p>.</p>
+            </div>
+
+            <footer>
+                <p>&copy; UdK Berlin, Fachgebiet Versorgungsplanung und Versorgungstechnik 2024</p>
+                <p><a href="./imprint.html">Imprint</a> <a href="https://www.udk-berlin.de/en/quick-access/privacy-protection/">Privacy</a></p>
+            </footer>
+        </div>
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>
