@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name="description" content="Homepage Virtual Reality Simulation Environment">
+      <meta name="author" content="Christoph Nytsch-Geusen">
+      <link rel="icon" href="../../favicon.ico">
+      <title>Virtual Reality Simulation Environment</title>
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+      <!-- Custom styles for this template -->
+      <link href="../css/styles.css" rel="stylesheet">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body>
+        <!-- Body content goes here -->
+
+         <div class="container">
+            <!-- Static navbar -->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-content">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="./radiation_surfaces.html">Virtual Reality Simulation Environment</a>
+                        <a class="navbar-brand" href="../strahlungsflaechen.html"><font color="red">DE</font></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-content">
+                        <ul class="nav navbar-nav">
+                          <li><a href="./index.html">Home</a></li>
+                          <li><a href="./concept.html">Concept</a></li>
+                          <li><a href="./therm_room_model.html">Thermal room model</a></li>
+                          <li><a href="./vr_room_model.html">Virtual room model</a></li>
+                          <li><a href="./climate_chamber.html">Climate chamber</a></li>
+                          <li class="active"><a href="./radiation_surfaces.html">Radiation surfaces</a></li>
+                          <li><a href="./examples.html">Examples</a></li>
+                          <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="jumbotron">
+                <h1>Radiation Surfaces</h1>
+                <p>For the perception of thermal radiation in the VR simulation environment,
+                   a cylinder with discretized radiation surfaces was added inside the climate
+                   dome, with the user positioned in the central axis of the cylinder.</p>
+
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="thumbnail">
+                          <img src="../img/Climate_chamber_radiation_surfaces.jpg" alt="">
+                          <figcaption style="text-align:right; font-style:italic">
+                              Extension of the climate chamber with an inside positioned cylinder with individual controllable radiation surfaces (Source: UdK Berlin)
+                          </figcaption>
+                      </div>
+                  </div>
+
+                  <p>The cylindrical lateral surface is discretized vertically and horizontally
+                     into 30 cm x 30 cm rectangular radiation surfaces. For each of these radiant surfaces
+                     of the cylinder, the view factors on all enclosing interior surfaces of the room model
+                     are calculated as a function of time and user position. These view factors form the basis
+                     for the calculation of a weighted equivalent temperature, which represents a projection
+                     of all surface temperatures of the room model onto a single virtual radiant surface.</p>
+            </div>
+
+            <div class="jumbotron">
+                <h2>Thermal Pixel</h2>
+                <p>The individual square radiant surfaces are digitally controlled and radiate
+                  thermally in a wide temperature range from 10 to 60 °C of a specified target temperature.
+                  So-called thermal pixels were developed for this purpose, each of which is equipped with
+                  four thermoelectric elements (TECs) with heating and cooling functions. At the front, heat
+                  is dissipated via thermal radiation and at the rear, the waste heat from the TECs is dissipated
+                  via a water cooling system.</p>
+
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="thumbnail">
+                          <img src="../img/Thermo_Pixel.jpg" alt="">
+                          <figcaption style="text-align:right; font-style:italic">
+                              Thermal pixel: left radiating front side, right back side with water cooling system and digital controller (Source: UdK Berlin)
+                          </figcaption>
+                      </div>
+                  </div>
+                  <p>The TECs on the back side of the thermal pixels are supplied with a constant DC power supply
+                     whose polarity changes depending on the heating or cooling mode. A digital
+                     THErmal PIxel COntroller (ThePiCo) was developed for this purpose. Each ThePiCo has
+                     two independent H-bridges with low-pass filters to smooth the PWM signal. The controller
+                     regulates the electrical power and changes polarity if necessary so that the thermal
+                     pixels always reach the desired temperature by cooling or heating the surface.</p>
+
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="thumbnail">
+                          <img src="../img/Radiation_Columns.gif" alt="">
+                          <figcaption style="text-align:right; font-style:italic">
+                              rdaition field, which consists of 5 x 3 thermal pixels in dynamic operation (Source: UdK Berlin)
+                          </figcaption>
+                      </div>
+                  </div>
+
+                  <p>The infrared image shows an arrangement of 5 x 3 thermal pixels, which are alternately heated horizontally and vertically
+                     to a certain temperature and then cooled down again.</p>
+            </div>
+
+            <footer>
+                <p>&copy; UdK Berlin, Fachgebiet Versorgungsplanung und Versorgungstechnik 2024</p>
+                <p><a href="./imprint.html">Imprint</a> <a href="https://www.udk-berlin.de/en/quick-access/privacy-protection/">Privacy</a></p>
+            </footer>
+        </div>
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>

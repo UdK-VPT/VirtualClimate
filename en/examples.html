@@ -31,18 +31,18 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="./therm_room_model.html">Virtual Reality Simulation Environment</a>
-                        <a class="navbar-brand" href="../therm_raummodell.html"><font color="red">DE</font></a>
+                        <a class="navbar-brand" href="./examples.html">Virtual Reality Simulation Environment</a>
+                        <a class="navbar-brand" href="../beispiele.html"><font color="red">DE</font></a>
                     </div>
                     <div class="collapse navbar-collapse" id="navbar-content">
                         <ul class="nav navbar-nav">
                           <li><a href="./index.html">Home</a></li>
                           <li><a href="./concept.html">Concept</a></li>
-                          <li class="active"><a href="./therm_room_model.html">Thermal room model</a></li>
+                          <li><a href="./therm_room_model.html">Thermal room model</a></li>
                           <li><a href="./vr_room_model.html">Virtual room model</a></li>
                           <li><a href="./climate_chamber.html">Climate chamber</a></li>
                           <li><a href="./radiation_surfaces.html">Radiation surfaces</a></li>
-                          <li><a href="./examples.html">Examples</a></li>
+                          <li class="active"><a href="./examples.html">Examples</a></li>
                           <li><a href="./contact.html">Contact</a></li>
                         </ul>
                     </div>
@@ -50,33 +50,49 @@
             </nav>
 
             <div class="jumbotron">
-                <h1>Thermal Room Model</h1>
-                <p>The thermal room model of the interactive VR simulation environment
-                   is implemented in Modelica based on the
-                   <a href="http://www.modelica-buildingsystems.de">BuildingSystems</a> model library
-                   and includes the environment model with the climatic boundary conditions,
-                   the model for energy balancing of the room and the UDP interface models
-                   to Unity und openHAB. </p>
+                <h1>Application Examples </h1>
+
+                <p>The interactive VR simulation environment can be flexibly adapted to different applications.</p>
+
+                <h2>Two room model</h2>
+
+                <p>This example involves a room model with a floor area of 6 m x 6 m and a
+                   height of 3 m, which can be a height of 3 m, which can be partially or
+                   completely divided into two separate rooms, which can also be air-conditioned differently.
+                   The right-hand half of the room has an almost completely glazed façade with a
+                   high potential for daylight utilization, while the left half of the room has a
+                   very small window.</p>
 
                   <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="thumbnail">
-                          <img src="../img/Modelica_simulation_model.jpg" alt="">
+                          <img src="../img/Two_room_model.jpg" alt="">
                           <figcaption style="text-align:right; font-style:italic">
-                              Thermal Modelica room model with interfaces to the interactive VR model
-                              in Unity and to the climate chamber controlled via openHAB
-                              to reproduce the simulated room climate (Source: UdK Berlin)
+                              Example of a two room model with individual room usage (Source: UdK Berlin)
                           </figcaption>
                       </div>
                   </div>
 
-                  <p>The Modelica model runs in parallel in real time to the operation of the
-                     climate chamber and provides the data for reproducing the simulated indoor
-                     climate (air and radiation temperature, humidity, air velocity through room
-                     openings, solar radiation through transparent facades, ...) inside the climate igloo.
-                     Certain parameters of the Modelica model can change dynamically
-                     as a result of user interaction, e.g. the position of the user
-                     in the room, the opening status of the windows or the set
-                     temperatures for heating and cooling. </p>
+                  <p>In the ceiling area, there are two artificial light sources per half of the room,
+                     one close to the facade and one at a greater depth in the room. Both side walls
+                     can be fully thermally conditioned in the model in order to create the feeling
+                     of radiant heat or radiant cold in VR in addition to the perception of a small
+                     and very warm surface (radiator).</p>
+
+                  <h2>Rooftop Building</h2>
+                  <p>This example shows a digital twin of a solar research building
+                    (<a href="http://www.solar-rooftop.de">Rooftop-Gebäude</a>).
+                    The video demonstrates the interaction of the user of the
+                    VR simulation with the adaptive facades of the building model:</p>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="thumbnail">
+                                <a href="https://www.youtube.com/watch?v=6bGZM_iBbr0"><img src="../img/Rooftop_VR.jpg" alt="">
+                                <figcaption style="text-align:right; font-style:italic">
+                                    Example of a user interaction with a buildiung facade (Video: UdK Berlin)
+                                </figcaption>
+                            </div>
+                        </div>
+                        <p>.</p>
             </div>
 
             <footer>

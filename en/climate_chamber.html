@@ -31,16 +31,16 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="./therm_room_model.html">Virtual Reality Simulation Environment</a>
-                        <a class="navbar-brand" href="../therm_raummodell.html"><font color="red">DE</font></a>
+                        <a class="navbar-brand" href="./climate_chamber.html">Virtual Reality Simulation Environment</a>
+                        <a class="navbar-brand" href="../klimakammer.html"><font color="red">DE</font></a>
                     </div>
                     <div class="collapse navbar-collapse" id="navbar-content">
                         <ul class="nav navbar-nav">
                           <li><a href="./index.html">Home</a></li>
                           <li><a href="./concept.html">Concept</a></li>
-                          <li class="active"><a href="./therm_room_model.html">Thermal room model</a></li>
+                          <li><a href="./therm_room_model.html">Thermal room model</a></li>
                           <li><a href="./vr_room_model.html">Virtual room model</a></li>
-                          <li><a href="./climate_chamber.html">Climate chamber</a></li>
+                          <li class="active"><a href="./climate_chamber.html">Climate chamber</a></li>
                           <li><a href="./radiation_surfaces.html">Radiation surfaces</a></li>
                           <li><a href="./examples.html">Examples</a></li>
                           <li><a href="./contact.html">Contact</a></li>
@@ -50,33 +50,33 @@
             </nav>
 
             <div class="jumbotron">
-                <h1>Thermal Room Model</h1>
-                <p>The thermal room model of the interactive VR simulation environment
-                   is implemented in Modelica based on the
-                   <a href="http://www.modelica-buildingsystems.de">BuildingSystems</a> model library
-                   and includes the environment model with the climatic boundary conditions,
-                   the model for energy balancing of the room and the UDP interface models
-                   to Unity und openHAB. </p>
+                <h1>Climate Chamber</h1>
+                <p>The climate chamber consists of a combination of an
+                   igloo-shaped tent and a wooden floor substructure, which
+                   increases the maximum available internal height of the dome to 2.8 m
+                   and has an internal diameter of 3.6 m.  Two circumferential ring pipes
+                   are embedded in the floor construction, which circulate the hot and cold air
+                   through 16 circular openings from two air conditioning units into the dome.</p>
 
                   <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="thumbnail">
-                          <img src="../img/Modelica_simulation_model.jpg" alt="">
+                          <img src="../img/Climate_chamber.jpg" alt="">
                           <figcaption style="text-align:right; font-style:italic">
-                              Thermal Modelica room model with interfaces to the interactive VR model
-                              in Unity and to the climate chamber controlled via openHAB
-                              to reproduce the simulated room climate (Source: UdK Berlin)
+                              Climate chamber of the Virtual Reality simulation environment with thermal feedback (Source: UdK Berlin)
                           </figcaption>
                       </div>
                   </div>
 
-                  <p>The Modelica model runs in parallel in real time to the operation of the
-                     climate chamber and provides the data for reproducing the simulated indoor
-                     climate (air and radiation temperature, humidity, air velocity through room
-                     openings, solar radiation through transparent facades, ...) inside the climate igloo.
-                     Certain parameters of the Modelica model can change dynamically
-                     as a result of user interaction, e.g. the position of the user
-                     in the room, the opening status of the windows or the set
-                     temperatures for heating and cooling. </p>
+                  <p>The climate dome is equipped with following devices:
+                    <ul>
+                      <li>two AC devices with Heating, cooling and dehumidification functionality for supplying the twi aur tubes,</li>
+                      <li>one AC split device for fast internal lowering of the air temperature level within the dome,</li>
+                      <li>two humidifiers for increasing the air humidity within the dome,</li>
+                      <li>two convective heating devices for fast internal increasing of the air temperature level within the dome,</li>
+                      <li>two fans with 26 stages for simulating the felt air movement through room openings and</li>
+                      <li>one electrical radiator with three power stages for the simulation of the felt soalr radiation through transparent room surfaces.</li>
+                    </ul>
+                  </p>
             </div>
 
             <footer>
